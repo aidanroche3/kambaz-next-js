@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NotFound() {
+export default function notFound() {
   return (
     <div className="p-4">
       <h2 className="text-danger">Page Not Found</h2>

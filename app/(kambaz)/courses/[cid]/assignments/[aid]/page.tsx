@@ -5,9 +5,10 @@ export default function AssignmentEditor() {
       <input id="wd-name" defaultValue="A1 - ENV + HTML" />
       <br />
       <br />
-      <textarea id="wd-description">
-        The assignment is available online Submit a link to the landing page of
-      </textarea>
+      <textarea
+        id="wd-description"
+        defaultValue="The assignment is available online Submit a link to the landing page of"
+      />
       <br />
       <table>
         <tr>
@@ -15,7 +16,7 @@ export default function AssignmentEditor() {
             <label htmlFor="wd-points">Points</label>
           </td>
           <td>
-            <input id="wd-points" defaultValue={100} />
+            <input id="wd-points" type="number" defaultValue={100} />
           </td>
         </tr>
         <tr>
@@ -97,20 +98,28 @@ export default function AssignmentEditor() {
           <td>
             <label htmlFor="wd-assign-to">Assign To:</label>
             <br></br>
-            <input type="text" id="wd-assign-to" />
+            <input type="text" defaultValue="Everyone" id="wd-assign-to" />
             <br></br>
             <td>
               <label htmlFor="wd-due-date"> Due: </label>
               <br></br>
-              <input type="date" id="wd-due-date" />
+              <input type="date" defaultValue="2026-01-25" id="wd-due-date" />
             </td>
             <br></br>
             <td>
               <label htmlFor="wd-available-from"> Available From: </label>
               <label htmlFor="wd-available-until"> Until: </label>
               <br></br>
-              <input type="date" id="wd-available-from" />
-              <input type="date" id="wd-available-until" />
+              <input
+                type="date"
+                defaultValue="2026-01-09"
+                id="wd-available-from"
+              />
+              <input
+                type="date"
+                defaultValue="2026-01-25"
+                id="wd-available-until"
+              />
             </td>
           </td>
         </tr>
