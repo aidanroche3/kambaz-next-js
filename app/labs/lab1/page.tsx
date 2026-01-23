@@ -211,14 +211,6 @@ export default function Lab1() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </textarea>
-          <h5 id="wd-buttons">Buttons</h5>
-          <button
-            type="button"
-            onClick={() => alert("Life is Good!")}
-            id="wd-all-good"
-          >
-            Hello World!
-          </button>
           <h5 id="wd-radio-buttons">Radio buttons</h5>
           <label>Favorite movie genre:</label>
           <br />
