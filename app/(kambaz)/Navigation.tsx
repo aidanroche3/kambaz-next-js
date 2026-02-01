@@ -1,9 +1,11 @@
 import { AiOutlineDashboard } from "react-icons/ai";
 import { IoCalendarOutline } from "react-icons/io5";
 import { LiaBookSolid } from "react-icons/lia";
-import { FaInbox, FaRegCircleUser } from "react-icons/fa6";
+import { FaRegCircleUser } from "react-icons/fa6";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import NavigationLink from "./NavigationLink";
+import { FiBook } from "react-icons/fi";
+import { GoInbox } from "react-icons/go";
 export default function KambazNavigation() {
   return (
     <div id="wd-kambaz-navigation">
@@ -34,12 +36,16 @@ export default function KambazNavigation() {
           icon={<AiOutlineDashboard className="fs-1" color="red" />}
         />
         <NavigationLink
+          linkName={"Courses"}
+          icon={<FiBook className="fs-1" color="red" />}
+        />
+        <NavigationLink
           linkName="Calendar"
           icon={<IoCalendarOutline className="fs-1" color="red" />}
         />
         <NavigationLink
           linkName="Inbox"
-          icon={<FaInbox className="fs-1" color="red" size={"40px"} />}
+          icon={<GoInbox className="fs-1" color="red" size={"40px"} />}
         />
         <NavigationLink
           linkName="Labs"
