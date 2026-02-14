@@ -32,10 +32,10 @@ export default function Dashboard() {
                 >
                   <CardImg
                     variant="top"
-                    src={course.imageRef}
+                    src={"/images/reactjs.jpg"}
                     width="100%"
                     height={160}
-                    alt={course.imageAlt}
+                    alt={"reactjs"}
                   />
                   <CardBody className="card-body">
                     <CardTitle className="wd-dashboard-course-title text-nowrap overflow-hidden">
