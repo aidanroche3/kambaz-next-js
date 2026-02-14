@@ -1,35 +1,57 @@
-import Link from "next/link";
+import { AiOutlineDashboard } from "react-icons/ai";
+import { IoCalendarOutline } from "react-icons/io5";
+import { LiaBookSolid } from "react-icons/lia";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
+import NavigationLink from "./NavigationLink";
+import { FiBook } from "react-icons/fi";
+import { GoInbox } from "react-icons/go";
 export default function KambazNavigation() {
   return (
     <div id="wd-kambaz-navigation">
-      <a href="https://www.northeastern.edu/" id="wd-neu-link" target="_blank">
-        Northeastern
-      </a>
-      <br />
-      <Link href="/account" id="wd-account-link">
-        Account
-      </Link>
-      <br />
-      <Link href="/dashboard" id="wd-dashboard-link">
-        Dashboard
-      </Link>
-      <br />
-      <Link href="/dashboard" id="wd-course-link">
-        Courses
-      </Link>
-      <br />
-      <Link href="/Calendar" id="wd-calendar-link">
-        Calendar
-      </Link>
-      <br />
-      <Link href="/Inbox" id="wd-inbox-link">
-        Inbox
-      </Link>
-      <br />
-      <Link href="/labs" id="wd-labs-link">
-        Labs
-      </Link>
-      <br />
+      <ListGroup
+        className="rounded-0 position-fixed bottom-0 top-0 d-none d-md-block bg-black z-2"
+        style={{ width: 110 }}
+        id="wd-kambaz-navigation"
+      >
+        <ListGroupItem
+          className="bg-black border-0 text-center"
+          as="a"
+          target="_blank"
+          href="https://www.northeastern.edu/"
+          id="wd-neu-link"
+        >
+          <img
+            src="/images/NEU.png"
+            width="75px"
+            alt="Northeastern University"
+          />
+        </ListGroupItem>
+        <NavigationLink
+          linkName={"Account"}
+          icon={<FaRegCircleUser className="fs-1" color="red" />}
+        />
+        <NavigationLink
+          linkName={"Dashboard"}
+          icon={<AiOutlineDashboard className="fs-1" color="red" />}
+        />
+        <NavigationLink
+          linkName={"Courses"}
+          icon={<FiBook className="fs-1" color="red" />}
+        />
+        <NavigationLink
+          linkName="Calendar"
+          icon={<IoCalendarOutline className="fs-1" color="red" />}
+        />
+        <NavigationLink
+          linkName="Inbox"
+          icon={<GoInbox className="fs-1" color="red" size={"40px"} />}
+        />
+        <NavigationLink
+          linkName="Labs"
+          icon={<LiaBookSolid className="fs-1" color="red" size={"50px"} />}
+        />
+      </ListGroup>
     </div>
   );
 }
