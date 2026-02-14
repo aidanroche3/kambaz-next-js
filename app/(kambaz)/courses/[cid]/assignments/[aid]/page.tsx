@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import {
   FormLabel,
   FormControl,
@@ -8,21 +9,33 @@ import {
   Row,
   Col,
   Container,
+  Button,
 } from "react-bootstrap";
 import FormCheck from "react-bootstrap/esm/FormCheck";
+import * as db from "../../../../database";
+import Link from "next/link";
 
 export default function AssignmentEditor() {
+  const { aid } = useParams();
+  const assignments = db.assignments;
+  const assignment = assignments.find(
+    (assignment: any) => assignment._id === aid,
+  );
   return (
     <div id="wd-assignments-editor" className="p-5">
       <Form.Group id="wd-name">
-        <FormLabel>Assignment Name</FormLabel>
-        <FormControl type="text" className="mb-3" />
+        <FormLabel>Assignment</FormLabel>
+        <FormControl
+          type="text"
+          className="mb-3"
+          defaultValue={assignment?.title}
+        />
       </Form.Group>
       <Form.Group id="wd-description">
         <FormControl
           as="textarea"
           rows={3}
-          placeholder="The assignment is available online Submit a link to the landing page of"
+          defaultValue={assignment?.description}
         />
       </Form.Group>
       <Form.Group id="wd-points" as={Row} className="my-3">
@@ -30,7 +43,7 @@ export default function AssignmentEditor() {
           Points
         </FormLabel>
         <Col sm={10}>
-          <FormControl type="number" defaultValue={100} />
+          <FormControl type="number" defaultValue={assignment?.points} />
         </Col>
       </Form.Group>
       <Form.Group id="wd-display-grade-as" as={Row} className="my-3">
@@ -126,7 +139,7 @@ export default function AssignmentEditor() {
               <FormLabel>Due</FormLabel>
               <FormControl
                 type="date"
-                defaultValue="2026-01-25"
+                defaultValue={assignment?.dueDate}
                 className="mb-3"
               />
             </Form.Group>
@@ -135,22 +148,38 @@ export default function AssignmentEditor() {
                 <FormLabel>Available From</FormLabel>
                 <FormControl
                   type="date"
-                  defaultValue="2026-01-09"
+                  defaultValue={assignment?.availableDate}
                   id="wd-available-from"
                 />
               </Form.Group>
               <Form.Group id="wd-available-until">
                 <FormLabel>Until</FormLabel>
-                <FormControl
-                  type="date"
-                  defaultValue="2026-01-25"
-                  id="wd-available-until"
-                />
+                <FormControl type="date" id="wd-available-until" />
               </Form.Group>
             </Row>
           </Container>
         </Col>
       </Form.Group>
+      <Row>
+        <Col>
+          <Link
+            href={`/courses/${assignment?.course}/assignments`}
+            className="ms-2"
+          >
+            <Button variant="danger" className="float-end">
+              Save
+            </Button>
+          </Link>
+          <Link
+            href={`/courses/${assignment?.course}/assignments`}
+            className="me-2"
+          >
+            <Button variant="secondary" className="float-end">
+              Cancel
+            </Button>
+          </Link>
+        </Col>
+      </Row>
     </div>
   );
 }

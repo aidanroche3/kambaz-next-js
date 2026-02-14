@@ -1,0 +1,218 @@
+[
+  {
+    "_id": "A101",
+    "title": "Propulsion Assignment",
+    "course": "RS101",
+    "description": "Design a rocket engine and calculate its thrust.",
+    "points": 100,
+    "dueDate": "2026-05-15",
+    "availableDate": "2026-05-01"
+  },
+  {
+    "_id": "A102",
+    "title": "Combustion Analysis",
+    "course": "RS101",
+    "description": "Analyze the combustion process in a rocket engine.",
+    "points": 100,
+    "dueDate": "2026-05-20",
+    "availableDate": "2026-05-10"
+  },
+  {
+    "_id": "A103",
+    "title": "Nozzle Design Project",
+    "course": "RS101",
+    "description": "Design a rocket nozzle for optimal performance.",
+    "points": 100,
+    "dueDate": "2026-05-25",
+    "availableDate": "2026-05-15"
+  },
+  {
+    "_id": "A201",
+    "title": "Aerodynamics Quiz",
+    "course": "RS102",
+    "description": "Quiz on basic aerodynamic principles.",
+    "points": 50,
+    "dueDate": "2026-05-10",
+    "availableDate": "2026-05-01"
+  },
+  {
+    "_id": "A202",
+    "title": "Flow Analysis",
+    "course": "RS102",
+    "description": "Analyze the flow around a rocket during ascent.",
+    "points": 100,
+    "dueDate": "2026-05-15",
+    "availableDate": "2026-05-05"
+  },
+  {
+    "_id": "A203",
+    "title": "Heating Analysis",
+    "course": "RS102",
+    "description": "Calculate the heating on a rocket during re-entry.",
+    "points": 100,
+    "dueDate": "2026-05-20",
+    "availableDate": "2026-05-10"
+  },
+  {
+    "_id": "A301",
+    "title": "Structural Design Task",
+    "course": "RS103",
+    "description": "Design the structural components of a rocket.",
+    "points": 100,
+    "dueDate": "2026-05-30",
+    "availableDate": "2026-05-20"
+  },
+  {
+    "_id": "A302",
+    "title": "Orbital Calculations",
+    "course": "RS103",
+    "description": "Calculate orbital mechanics for a rocket.",
+    "points": 100,
+    "dueDate": "2026-05-31",
+    "availableDate": "2026-05-21"
+  },
+  {
+    "_id": "A303",
+    "title": "Systems Engineering Exam",
+    "course": "RS103",
+    "description": "Exam covering systems engineering principles.",
+    "points": 150,
+    "dueDate": "2026-06-15",
+    "availableDate": "2026-05-31"
+  },
+  {
+    "_id": "A401",
+    "title": "Organic Chemistry Lab",
+    "course": "RS104",
+    "description": "Laboratory work in organic chemistry.",
+    "points": 100,
+    "dueDate": "2026-05-25",
+    "availableDate": "2026-05-15"
+  },
+  {
+    "_id": "A402",
+    "title": "Organic Chemistry Problem Set",
+    "course": "RS104",
+    "description": "Problem set for organic chemistry.",
+    "points": 100,
+    "dueDate": "2026-05-30",
+    "availableDate": "2026-05-20"
+  },
+  {
+    "_id": "A403",
+    "title": "Organic Chemistry Review",
+    "course": "RS104",
+    "description": "Review session for organic chemistry.",
+    "points": 50,
+    "dueDate": "2026-06-05",
+    "availableDate": "2026-05-25"
+  },
+  {
+    "_id": "A501",
+    "title": "Inorganic Chemistry Lab",
+    "course": "RS105",
+    "description": "Laboratory work in inorganic chemistry.",
+    "points": 100,
+    "dueDate": "2026-05-28",
+    "availableDate": "2026-05-18"
+  },
+  {
+    "_id": "A502",
+    "title": "Inorganic Chemistry Problem Set",
+    "course": "RS105",
+    "description": "Problem set for inorganic chemistry.",
+    "points": 100,
+    "dueDate": "2026-05-30",
+    "availableDate": "2026-05-20"
+  },
+  {
+    "_id": "A503",
+    "title": "Inorganic Chemistry Review",
+    "course": "RS105",
+    "description": "Review session for inorganic chemistry.",
+    "points": 50,
+    "dueDate": "2026-06-10",
+    "availableDate": "2026-05-30"
+  },
+  {
+    "_id": "A601",
+    "title": "Physical Chemistry Lab",
+    "course": "RS106",
+    "description": "Laboratory work in physical chemistry.",
+    "points": 100,
+    "dueDate": "2026-05-31",
+    "availableDate": "2026-05-21"
+  },
+  {
+    "_id": "A602",
+    "title": "Physical Chemistry Problem Set",
+    "course": "RS106",
+    "description": "Problem set for physical chemistry.",
+    "points": 100,
+    "dueDate": "2026-06-05",
+    "availableDate": "2026-05-25"
+  },
+  {
+    "_id": "A603",
+    "title": "Physical Chemistry Review",
+    "course": "RS106",
+    "description": "Review session for physical chemistry.",
+    "points": 50,
+    "dueDate": "2026-06-15",
+    "availableDate": "2026-05-31"
+  },
+  {
+    "_id": "A701",
+    "title": "Ancient Languages Practice",
+    "course": "RS107",
+    "description": "Practice exercises for ancient languages.",
+    "points": 100,
+    "dueDate": "2026-05-20",
+    "availableDate": "2026-05-10"
+  },
+  {
+    "_id": "A702",
+    "title": "Middle Earth History Sheet",
+    "course": "RS107",
+    "description": "Worksheet on the history of Middle-earth.",
+    "points": 100,
+    "dueDate": "2026-05-25",
+    "availableDate": "2026-05-15"
+  },
+  {
+    "_id": "A703",
+    "title": "Ancient Languages Review",
+    "course": "RS107",
+    "description": "Review session for ancient languages.",
+    "points": 50,
+    "dueDate": "2026-05-30",
+    "availableDate": "2026-05-20"
+  },
+  {
+    "_id": "A801",
+    "title": "Inter-species Diplomacy in Middle-earth Reading",
+    "course": "RS108",
+    "description": "Reading assignment on inter-species diplomacy in Middle-earth.",
+    "points": 100,
+    "dueDate": "2026-05-25",
+    "availableDate": "2026-05-15"
+  },
+  {
+    "_id": "A802",
+    "title": "Inter-species Diplomacy in Middle-earth Discussion",
+    "course": "RS108",
+    "description": "Discussion assignment on inter-species diplomacy in Middle-earth.",
+    "points": 100,
+    "dueDate": "2026-05-30",
+    "availableDate": "2026-05-20"
+  },
+  {
+    "_id": "A803",
+    "title": "Inter-species Diplomacy in Middle-earth Review",
+    "course": "RS108",
+    "description": "Review session for inter-species diplomacy in Middle-earth.",
+    "points": 50,
+    "dueDate": "2026-06-05",
+    "availableDate": "2026-05-30"
+  }
+]
