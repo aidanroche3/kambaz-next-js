@@ -2,9 +2,11 @@
 
 export default function ClientComponentDemo() {
   // This runs ONLY in the browser
-  window.alert(
-    "Hello! This alert runs in the browser because this is a Client Component.",
-  );
+  if (typeof window !== "undefined") {
+    window.alert(
+      "Hello! This alert runs in the browser because this is a Client Component.",
+    );
+  }
 
   return (
     <div>
