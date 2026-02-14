@@ -65,7 +65,7 @@ export default function Lab3() {
       <DestructingImports />
       <Classes />
       <Styles />
-      {/* <ClientComponentDemo /> */}
+      <ClientComponentDemo />
       <ServerComponentDemo />
       <Add a={3} b={4} />
       <h4>Square of 4</h4>
