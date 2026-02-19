@@ -1,0 +1,626 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to Rocket Propulsion",
+    "description": "Basic principles of rocket propulsion and rocket engines.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L101",
+        "name": "History of Rocketry",
+        "description": "A brief history of rocketry and space exploration.",
+        "module": "M101"
+      },
+      {
+        "_id": "L102",
+        "name": "Rocket Propulsion Fundamentals",
+        "description": "Basic principles of rocket propulsion.",
+        "module": "M101"
+      },
+      {
+        "_id": "L103",
+        "name": "Rocket Engine Types",
+        "description": "Overview of different types of rocket engines.",
+        "module": "M101"
+      }
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "Fuel and Combustion",
+    "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L201",
+        "name": "Rocket Fuel",
+        "description": "Overview of different types of rocket fuels.",
+        "module": "M102"
+      },
+      {
+        "_id": "L202",
+        "name": "Combustion Processes",
+        "description": "Understanding combustion processes and efficiency.",
+        "module": "M102"
+      },
+      {
+        "_id": "L203",
+        "name": "Combustion Instability",
+        "description": "Understanding combustion instability and mitigation.",
+        "module": "M102"
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Nozzle Design",
+    "description": "Principles of rocket nozzle design and performance optimization.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "L301",
+        "name": "Nozzle Design",
+        "description": "Overview of different types of rocket nozzles.",
+        "module": "M103"
+      },
+      {
+        "_id": "L302",
+        "name": "Nozzle Performance",
+        "description": "Understanding nozzle performance and efficiency.",
+        "module": "M103"
+      },
+      {
+        "_id": "L303",
+        "name": "Nozzle Optimization",
+        "description": "Optimizing nozzle design for specific applications.",
+        "module": "M103"
+      }
+    ]
+  },
+  {
+    "_id": "M201",
+    "name": "Fundamentals of Aerodynamics",
+    "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L401",
+        "name": "Aerodynamic Forces",
+        "description": "Understanding the fundamental forces acting on aircraft.",
+        "module": "M201"
+      },
+      {
+        "_id": "L402",
+        "name": "Aerodynamic Drag",
+        "description": "Understanding aerodynamic drag and its impact on aircraft performance.",
+        "module": "M201"
+      },
+      {
+        "_id": "L403",
+        "name": "Aerodynamic Lift",
+        "description": "Understanding aerodynamic lift and its generation.",
+        "module": "M201"
+      }
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Subsonic and Supersonic Flow",
+    "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L501",
+        "name": "Subsonic Flow",
+        "description": "Overview of subsonic flow characteristics.",
+        "module": "M202"
+      },
+      {
+        "_id": "L502",
+        "name": "Supersonic Flow",
+        "description": "Overview of supersonic flow characteristics.",
+        "module": "M202"
+      },
+      {
+        "_id": "L503",
+        "name": "Transonic Flow",
+        "description": "Overview of transonic flow characteristics.",
+        "module": "M202"
+      }
+    ]
+  },
+  {
+    "_id": "M203",
+    "name": "Aerodynamic Heating",
+    "description": "Study of aerodynamic heating and thermal protection systems.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "L601",
+        "name": "Aerodynamic Heating",
+        "description": "Overview of aerodynamic heating and thermal protection systems.",
+        "module": "M203"
+      },
+      {
+        "_id": "L602",
+        "name": "Thermal Protection Systems",
+        "description": "Overview of thermal protection systems and their design.",
+        "module": "M203"
+      },
+      {
+        "_id": "L603",
+        "name": "Reentry Heating",
+        "description": "Overview of reentry heating and its impact on spacecraft design.",
+        "module": "M203"
+      }
+    ]
+  },
+  {
+    "_id": "M301",
+    "name": "Spacecraft Structural Design",
+    "description": "Fundamentals of designing spacecraft structures and materials selection.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L701",
+        "name": "Spacecraft Structural Design",
+        "description": "Overview of spacecraft structural design principles and materials selection.",
+        "module": "M301"
+      },
+      {
+        "_id": "L702",
+        "name": "Spacecraft Materials",
+        "description": "Overview of materials used in spacecraft design and their properties.",
+        "module": "M301"
+      },
+      {
+        "_id": "L703",
+        "name": "Structural Analysis",
+        "description": "Understanding structural analysis techniques for spacecraft design.",
+        "module": "M301"
+      }
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Orbital Mechanics",
+    "description": "Understanding orbital dynamics and mission planning.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L801",
+        "name": "Orbital Mechanics",
+        "description": "Overview of orbital mechanics principles and mission planning.",
+        "module": "M302"
+      },
+      {
+        "_id": "L802",
+        "name": "Orbit Determination",
+        "description": "Understanding orbit determination techniques and their applications.",
+        "module": "M302"
+      },
+      {
+        "_id": "L803",
+        "name": "Mission Planning",
+        "description": "Overview of mission planning and trajectory design for space missions.",
+        "module": "M302"
+      }
+    ]
+  },
+  {
+    "_id": "M303",
+    "name": "Spacecraft Systems Engineering",
+    "description": "Overview of spacecraft systems and subsystems engineering.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "L901",
+        "name": "Spacecraft Systems Engineering",
+        "description": "Overview of spacecraft systems and subsystems engineering principles.",
+        "module": "M303"
+      },
+      {
+        "_id": "L902",
+        "name": "Subsystem Design",
+        "description": "Understanding the design of spacecraft subsystems and their integration.",
+        "module": "M303"
+      },
+      {
+        "_id": "L903",
+        "name": "Systems Integration",
+        "description": "Overview of systems integration and testing for spacecraft design.",
+        "module": "M303"
+      }
+    ]
+  },
+  {
+    "_id": "M401",
+    "name": "Organic Chemistry",
+    "description": "Overview of organic chemistry principles and applications.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L1001",
+        "name": "Organic Chemistry Fundamentals",
+        "description": "Overview of organic chemistry principles and applications.",
+        "module": "M401"
+      },
+      {
+        "_id": "L1002",
+        "name": "Functional Groups",
+        "description": "Understanding functional groups and their reactivity in organic chemistry.",
+        "module": "M401"
+      },
+      {
+        "_id": "L1003",
+        "name": "Organic Synthesis",
+        "description": "Overview of organic synthesis techniques and strategies.",
+        "module": "M401"
+      }
+    ]
+  },
+  {
+    "_id": "M402",
+    "name": "Inorganic Chemistry",
+    "description": "Overview of inorganic chemistry principles and applications.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L1101",
+        "name": "Inorganic Chemistry Fundamentals",
+        "description": "Overview of inorganic chemistry principles and applications.",
+        "module": "M402"
+      },
+      {
+        "_id": "L1102",
+        "name": "Coordination Chemistry",
+        "description": "Understanding coordination chemistry and its applications in inorganic chemistry.",
+        "module": "M402"
+      },
+      {
+        "_id": "L1103",
+        "name": "Organometallic Chemistry",
+        "description": "Overview of organometallic chemistry and its applications in catalysis and materials science.",
+        "module": "M402"
+      }
+    ]
+  },
+  {
+    "_id": "M403",
+    "name": "Physical Chemistry",
+    "description": "Overview of physical chemistry principles and applications.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "L1201",
+        "name": "Physical Chemistry Fundamentals",
+        "description": "Overview of physical chemistry principles and applications.",
+        "module": "M403"
+      },
+      {
+        "_id": "L1202",
+        "name": "Thermodynamics",
+        "description": "Understanding thermodynamics principles and their applications in physical chemistry.",
+        "module": "M403"
+      },
+      {
+        "_id": "L1203",
+        "name": "Quantum Mechanics",
+        "description": "Overview of quantum mechanics principles and their applications in physical chemistry.",
+        "module": "M403"
+      }
+    ]
+  },
+  {
+    "_id": "M501",
+    "name": "Inorganic Chemistry",
+    "description": "Overview of inorganic chemistry principles and applications.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L1301",
+        "name": "Inorganic Chemistry Fundamentals",
+        "description": "Overview of inorganic chemistry principles and applications.",
+        "module": "M501"
+      },
+      {
+        "_id": "L1302",
+        "name": "Coordination Chemistry",
+        "description": "Understanding coordination chemistry and its applications in inorganic chemistry.",
+        "module": "M501"
+      },
+      {
+        "_id": "L1303",
+        "name": "Organometallic Chemistry",
+        "description": "Overview of organometallic chemistry and its applications in catalysis and materials science.",
+        "module": "M501"
+      }
+    ]
+  },
+  {
+    "_id": "M502",
+    "name": "Physical Chemistry",
+    "description": "Overview of physical chemistry principles and applications.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L1401",
+        "name": "Physical Chemistry Fundamentals",
+        "description": "Overview of physical chemistry principles and applications.",
+        "module": "M502"
+      },
+      {
+        "_id": "L1402",
+        "name": "Thermodynamics",
+        "description": "Understanding thermodynamics principles and their applications in physical chemistry.",
+        "module": "M502"
+      },
+      {
+        "_id": "L1403",
+        "name": "Quantum Mechanics",
+        "description": "Overview of quantum mechanics principles and their applications in physical chemistry.",
+        "module": "M502"
+      }
+    ]
+  },
+  {
+    "_id": "M503",
+    "name": "Analytical Chemistry",
+    "description": "Overview of analytical chemistry principles and applications.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": "L1501",
+        "name": "Analytical Chemistry Fundamentals",
+        "description": "Overview of analytical chemistry principles and applications.",
+        "module": "M503"
+      },
+      {
+        "_id": "L1502",
+        "name": "Spectroscopy",
+        "description": "Understanding spectroscopy techniques and their applications in analytical chemistry.",
+        "module": "M503"
+      },
+      {
+        "_id": "L1503",
+        "name": "Chromatography",
+        "description": "Overview of chromatography techniques and their applications in analytical chemistry.",
+        "module": "M503"
+      }
+    ]
+  },
+  {
+    "_id": "M601",
+    "name": "Physical Chemistry",
+    "description": "Overview of physical chemistry principles and applications.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L1601",
+        "name": "Physical Chemistry Fundamentals",
+        "description": "Overview of physical chemistry principles and applications.",
+        "module": "M601"
+      },
+      {
+        "_id": "L1602",
+        "name": "Thermodynamics",
+        "description": "Understanding thermodynamics principles and their applications in physical chemistry.",
+        "module": "M601"
+      },
+      {
+        "_id": "L1603",
+        "name": "Quantum Mechanics",
+        "description": "Overview of quantum mechanics principles and their applications in physical chemistry.",
+        "module": "M601"
+      }
+    ]
+  },
+  {
+    "_id": "M602",
+    "name": "Spectroscopy",
+    "description": "Overview of spectroscopy principles and applications.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L1701",
+        "name": "Spectroscopy Fundamentals",
+        "description": "Overview of spectroscopy principles and applications.",
+        "module": "M602"
+      },
+      {
+        "_id": "L1702",
+        "name": "UV-Vis Spectroscopy",
+        "description": "Understanding UV-Vis spectroscopy techniques and their applications in physical chemistry.",
+        "module": "M602"
+      },
+      {
+        "_id": "L1703",
+        "name": "NMR Spectroscopy",
+        "description": "Overview of NMR spectroscopy techniques and their applications in physical chemistry.",
+        "module": "M602"
+      }
+    ]
+  },
+  {
+    "_id": "M603",
+    "name": "Kinetics",
+    "description": "Overview of kinetics principles and applications.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": "L1801",
+        "name": "Kinetics Fundamentals",
+        "description": "Overview of kinetics principles and applications.",
+        "module": "M603"
+      },
+      {
+        "_id": "L1802",
+        "name": "Reaction Mechanisms",
+        "description": "Understanding reaction mechanisms and their applications in physical chemistry.",
+        "module": "M603"
+      },
+      {
+        "_id": "L1803",
+        "name": "Catalysis",
+        "description": "Overview of catalysis principles and their applications in physical chemistry.",
+        "module": "M603"
+      }
+    ]
+  },
+  {
+    "_id": "M701",
+    "name": "Ancient Languages and Scripts of Middle-earth",
+    "description": "An exploration of the ancient languages and scripts used in J.R.R. Tolkien's Middle-earth, including Elvish, Dwarvish, and the Black Speech. This course delves into the linguistic structures, phonetics, and writing systems of these fictional languages, as well as their cultural significance within the context of Middle-earth lore. Students will engage in reading and translating texts written in these languages, gaining a deeper appreciation for Tolkien's world-building and linguistic creativity.",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L1901",
+        "name": "Introduction to Middle-earth Languages",
+        "description": "Overview of the ancient languages and scripts used in Middle-earth.",
+        "module": "M701"
+      },
+      {
+        "_id": "L1902",
+        "name": "Elvish Languages",
+        "description": "Study of the Elvish languages, including Sindarin and Quenya.",
+        "module": "M701"
+      },
+      {
+        "_id": "L1903",
+        "name": "Dwarvish and Black Speech",
+        "description": "Study of the Dwarvish language (Khuzdul) and the Black Speech of Mordor.",
+        "module": "M701"
+      }
+    ]
+  },
+  {
+    "_id": "M702",
+    "name": "Inter-species Diplomacy in Middle-earth",
+    "description": "An examination of the complex relationships and diplomatic interactions between the various species inhabiting J.R.R. Tolkien's Middle-earth, including Wizards",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L2001",
+        "name": "Introduction to Middle-earth Diplomacy",
+        "description": "Overview of the complex relationships and diplomatic interactions between the various species in Middle-earth.",
+        "module": "M702"
+      },
+      {
+        "_id": "L2002",
+        "name": "Wizards and Elves",
+        "description": "Study of the diplomatic interactions between Wizards and Elves in Middle-earth.",
+        "module": "M702"
+      },
+      {
+        "_id": "L2003",
+        "name": "Men and Dwarves",
+        "description": "Study of the diplomatic interactions between Men and Dwarves in Middle-earth.",
+        "module": "M702"
+      }
+    ]
+  },
+  {
+    "_id": "M703",
+    "name": "The War of the Ring: A Case Study in Middle-earth Diplomacy",
+    "description": "An in-depth analysis of the War of the Ring as a case study in inter-species diplomacy within J.R.R. Tolkien's Middle-earth. This course explores the alliances, conflicts, and diplomatic strategies employed by the various",
+    "course": "RS107",
+    "lessons": [
+      {
+        "_id": "L2101",
+        "name": "Introduction to the War of the Ring",
+        "description": "Overview of the War of the Ring and its significance in Middle-earth history.",
+        "module": "M703"
+      },
+      {
+        "_id": "L2102",
+        "name": "Alliances and Conflicts",
+        "description": "Study of the alliances and conflicts between different species during the War of the Ring.",
+        "module": "M703"
+      },
+      {
+        "_id": "L2103",
+        "name": "Diplomatic Strategies",
+        "description": "Analysis of the diplomatic strategies employed by different factions during the War of the Ring.",
+        "module": "M703"
+      }
+    ]
+  },
+  {
+    "_id": "M801",
+    "name": "Wizards, Elves, and Men: Inter-species Diplomacy in Middle-earth",
+    "description": "An exploration of the complex relationships and diplomatic interactions between the various species inhabiting J.R.R. Tolkien's Middle-earth, including Wizards",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L2201",
+        "name": "Introduction to Middle-earth Diplomacy",
+        "description": "Overview of the complex relationships and diplomatic interactions between the various species in Middle-earth.",
+        "module": "M801"
+      },
+      {
+        "_id": "L2202",
+        "name": "Wizards and Elves",
+        "description": "Study of the diplomatic interactions between Wizards and Elves in Middle-earth.",
+        "module": "M801"
+      },
+      {
+        "_id": "L2203",
+        "name": "Men and Dwarves",
+        "description": "Study of the diplomatic interactions between Men and Dwarves in Middle-earth.",
+        "module": "M801"
+      }
+    ]
+  },
+  {
+    "_id": "M802",
+    "name": "The War of the Ring: A Case Study in Middle-earth Diplomacy",
+    "description": "An in-depth analysis of the War of the Ring as a case study in inter-species diplomacy within J.R.R. Tolkien's Middle-earth. This course explores the alliances, conflicts, and diplomatic strategies employed by the various factions during this pivotal event in Middle-earth history.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L2301",
+        "name": "Introduction to the War of the Ring",
+        "description": "Overview of the War of the Ring and its significance in Middle-earth history.",
+        "module": "M802"
+      },
+      {
+        "_id": "L2302",
+        "name": "Alliances and Conflicts",
+        "description": "Study of the alliances and conflicts between different species during the War of the Ring.",
+        "module": "M802"
+      },
+      {
+        "_id": "L2303",
+        "name": "Diplomatic Strategies",
+        "description": "Analysis of the diplomatic strategies employed by different factions during the War of the Ring.",
+        "module": "M802"
+      }
+    ]
+  },
+  {
+    "_id": "M803",
+    "name": "The Role of Leadership in Middle-earth Diplomacy",
+    "description": "An examination of the role of leadership in shaping diplomatic interactions and outcomes in J.R.R. Tolkien's Middle-earth. This course explores the leadership styles and decisions of key figures such as Gandalf, Elrond, Aragorn, and others, and how their actions influenced the course of events in Middle-earth.",
+    "course": "RS108",
+    "lessons": [
+      {
+        "_id": "L2401",
+        "name": "Introduction to Leadership in Middle-earth",
+        "description": "Overview of the role of leadership in shaping diplomatic interactions in Middle-earth.",
+        "module": "M803"
+      },
+      {
+        "_id": "L2402",
+        "name": "Gandalf and Elrond: Wise Leadership",
+        "description": "Study of the leadership styles and decisions of Gandalf and Elrond in Middle-earth diplomacy.",
+        "module": "M803"
+      },
+      {
+        "_id": "L2403",
+        "name": "Aragorn: The Reluctant King",
+        "description": "Analysis of Aragorn's leadership style and its impact on Middle-earth diplomacy.",
+        "module": "M803"
+      }
+    ]
+  }
+]
