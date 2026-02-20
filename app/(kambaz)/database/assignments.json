@@ -6,7 +6,8 @@
     "description": "Design a rocket engine and calculate its thrust.",
     "points": 100,
     "dueDate": "2026-05-15",
-    "availableDate": "2026-05-01"
+    "availableFrom": "2026-05-01",
+    "availableUntil": "2026-05-08"
   },
   {
     "_id": "A102",
@@ -15,7 +16,8 @@
     "description": "Analyze the combustion process in a rocket engine.",
     "points": 100,
     "dueDate": "2026-05-20",
-    "availableDate": "2026-05-10"
+    "availableFrom": "2026-05-10",
+    "availableUntil": "2026-05-18"
   },
   {
     "_id": "A103",
@@ -24,7 +26,8 @@
     "description": "Design a rocket nozzle for optimal performance.",
     "points": 100,
     "dueDate": "2026-05-25",
-    "availableDate": "2026-05-15"
+    "availableFrom": "2026-05-15",
+    "availableUntil": "2026-05-18"
   },
   {
     "_id": "A201",
@@ -33,7 +36,8 @@
     "description": "Quiz on basic aerodynamic principles.",
     "points": 50,
     "dueDate": "2026-05-10",
-    "availableDate": "2026-05-01"
+    "availableFrom": "2026-05-01",
+    "availableUntil": "2026-05-08"
   },
   {
     "_id": "A202",
@@ -42,7 +46,8 @@
     "description": "Analyze the flow around a rocket during ascent.",
     "points": 100,
     "dueDate": "2026-05-15",
-    "availableDate": "2026-05-05"
+    "availableFrom": "2026-05-05",
+    "availableUntil": "2026-05-18"
   },
   {
     "_id": "A203",
@@ -51,7 +56,8 @@
     "description": "Calculate the heating on a rocket during re-entry.",
     "points": 100,
     "dueDate": "2026-05-20",
-    "availableDate": "2026-05-10"
+    "availableFrom": "2026-05-10",
+    "availableUntil": "2026-05-18"
   },
   {
     "_id": "A301",
@@ -60,7 +66,8 @@
     "description": "Design the structural components of a rocket.",
     "points": 100,
     "dueDate": "2026-05-30",
-    "availableDate": "2026-05-20"
+    "availableFrom": "2026-05-20",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A302",
@@ -69,7 +76,8 @@
     "description": "Calculate orbital mechanics for a rocket.",
     "points": 100,
     "dueDate": "2026-05-31",
-    "availableDate": "2026-05-21"
+    "availableFrom": "2026-05-21",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A303",
@@ -78,7 +86,8 @@
     "description": "Exam covering systems engineering principles.",
     "points": 150,
     "dueDate": "2026-06-15",
-    "availableDate": "2026-05-31"
+    "availableFrom": "2026-05-31",
+    "availableUntil": "2026-06-08"
   },
   {
     "_id": "A401",
@@ -87,7 +96,8 @@
     "description": "Laboratory work in organic chemistry.",
     "points": 100,
     "dueDate": "2026-05-25",
-    "availableDate": "2026-05-15"
+    "availableFrom": "2026-05-15",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A402",
@@ -96,7 +106,8 @@
     "description": "Problem set for organic chemistry.",
     "points": 100,
     "dueDate": "2026-05-30",
-    "availableDate": "2026-05-20"
+    "availableFrom": "2026-05-20",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A403",
@@ -105,7 +116,8 @@
     "description": "Review session for organic chemistry.",
     "points": 50,
     "dueDate": "2026-06-05",
-    "availableDate": "2026-05-25"
+    "availableFrom": "2026-05-25",
+    "availableUntil": "2026-06-08"
   },
   {
     "_id": "A501",
@@ -114,7 +126,8 @@
     "description": "Laboratory work in inorganic chemistry.",
     "points": 100,
     "dueDate": "2026-05-28",
-    "availableDate": "2026-05-18"
+    "availableFrom": "2026-05-18",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A502",
@@ -123,7 +136,8 @@
     "description": "Problem set for inorganic chemistry.",
     "points": 100,
     "dueDate": "2026-05-30",
-    "availableDate": "2026-05-20"
+    "availableFrom": "2026-05-20",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A503",
@@ -132,7 +146,8 @@
     "description": "Review session for inorganic chemistry.",
     "points": 50,
     "dueDate": "2026-06-10",
-    "availableDate": "2026-05-30"
+    "availableFrom": "2026-05-30",
+    "availableUntil": "2026-06-08"
   },
   {
     "_id": "A601",
@@ -141,7 +156,8 @@
     "description": "Laboratory work in physical chemistry.",
     "points": 100,
     "dueDate": "2026-05-31",
-    "availableDate": "2026-05-21"
+    "availableFrom": "2026-05-21",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A602",
@@ -150,7 +166,8 @@
     "description": "Problem set for physical chemistry.",
     "points": 100,
     "dueDate": "2026-06-05",
-    "availableDate": "2026-05-25"
+    "availableFrom": "2026-05-25",
+    "availableUntil": "2026-06-08"
   },
   {
     "_id": "A603",
@@ -159,7 +176,8 @@
     "description": "Review session for physical chemistry.",
     "points": 50,
     "dueDate": "2026-06-15",
-    "availableDate": "2026-05-31"
+    "availableFrom": "2026-05-31",
+    "availableUntil": "2026-05-08"
   },
   {
     "_id": "A701",
@@ -168,7 +186,8 @@
     "description": "Practice exercises for ancient languages.",
     "points": 100,
     "dueDate": "2026-05-20",
-    "availableDate": "2026-05-10"
+    "availableFrom": "2026-05-10",
+    "availableUntil": "2026-05-18"
   },
   {
     "_id": "A702",
@@ -177,7 +196,8 @@
     "description": "Worksheet on the history of Middle-earth.",
     "points": 100,
     "dueDate": "2026-05-25",
-    "availableDate": "2026-05-15"
+    "availableFrom": "2026-05-15",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A703",
@@ -186,7 +206,8 @@
     "description": "Review session for ancient languages.",
     "points": 50,
     "dueDate": "2026-05-30",
-    "availableDate": "2026-05-20"
+    "availableFrom": "2026-05-20",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A801",
@@ -195,7 +216,8 @@
     "description": "Reading assignment on inter-species diplomacy in Middle-earth.",
     "points": 100,
     "dueDate": "2026-05-25",
-    "availableDate": "2026-05-15"
+    "availableFrom": "2026-05-15",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A802",
@@ -204,7 +226,8 @@
     "description": "Discussion assignment on inter-species diplomacy in Middle-earth.",
     "points": 100,
     "dueDate": "2026-05-30",
-    "availableDate": "2026-05-20"
+    "availableFrom": "2026-05-20",
+    "availableUntil": "2026-05-28"
   },
   {
     "_id": "A803",
@@ -213,6 +236,7 @@
     "description": "Review session for inter-species diplomacy in Middle-earth.",
     "points": 50,
     "dueDate": "2026-06-05",
-    "availableDate": "2026-05-30"
+    "availableFrom": "2026-05-30",
+    "availableUntil": "2026-06-08"
   }
 ]

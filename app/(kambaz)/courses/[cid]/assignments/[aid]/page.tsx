@@ -12,15 +12,31 @@ import {
   Button,
 } from "react-bootstrap";
 import FormCheck from "react-bootstrap/esm/FormCheck";
-import * as db from "../../../../database";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../../store";
+import { addAssignment, updateAssignment } from "../reducer";
+import { useState } from "react";
 
 export default function AssignmentEditor() {
   const { aid } = useParams();
-  const assignments = db.assignments;
-  const assignment = assignments.find(
-    (assignment: any) => assignment._id === aid,
+  const { cid } = useParams();
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentReducer,
   );
+  const dispatch = useDispatch();
+  const isNewAssignment = assignments.every(
+    (assignment) => assignment._id != aid,
+  );
+
+  const [assignment, setAssignment] = useState(
+    assignments.find((assignment: any) => assignment._id === aid) ?? {
+      _id: aid,
+      course: cid,
+      title: "New Assignment",
+    },
+  );
+
   return (
     <div id="wd-assignments-editor" className="p-5">
       <Form.Group id="wd-name">
@@ -29,6 +45,9 @@ export default function AssignmentEditor() {
           type="text"
           className="mb-3"
           defaultValue={assignment?.title}
+          onChange={(e) =>
+            setAssignment({ ...assignment, title: e.target.value })
+          }
         />
       </Form.Group>
       <Form.Group id="wd-description">
@@ -36,6 +55,9 @@ export default function AssignmentEditor() {
           as="textarea"
           rows={3}
           defaultValue={assignment?.description}
+          onChange={(e) =>
+            setAssignment({ ...assignment, description: e.target.value })
+          }
         />
       </Form.Group>
       <Form.Group id="wd-points" as={Row} className="my-3">
@@ -43,7 +65,13 @@ export default function AssignmentEditor() {
           Points
         </FormLabel>
         <Col sm={10}>
-          <FormControl type="number" defaultValue={assignment?.points} />
+          <FormControl
+            type="number"
+            defaultValue={assignment?.points}
+            onChange={(e) =>
+              setAssignment({ ...assignment, points: parseInt(e.target.value) })
+            }
+          />
         </Col>
       </Form.Group>
       <Form.Group id="wd-display-grade-as" as={Row} className="my-3">
@@ -141,6 +169,9 @@ export default function AssignmentEditor() {
                 type="date"
                 defaultValue={assignment?.dueDate}
                 className="mb-3"
+                onChange={(e) => {
+                  setAssignment({ ...assignment, dueDate: e.target.value });
+                }}
               />
             </Form.Group>
             <Row xs={2}>
@@ -148,13 +179,29 @@ export default function AssignmentEditor() {
                 <FormLabel>Available From</FormLabel>
                 <FormControl
                   type="date"
-                  defaultValue={assignment?.availableDate}
+                  defaultValue={assignment?.availableFrom}
                   id="wd-available-from"
+                  onChange={(e) => {
+                    setAssignment({
+                      ...assignment,
+                      availableFrom: e.target.value,
+                    });
+                  }}
                 />
               </Form.Group>
               <Form.Group id="wd-available-until">
                 <FormLabel>Until</FormLabel>
-                <FormControl type="date" id="wd-available-until" />
+                <FormControl
+                  type="date"
+                  id="wd-available-until"
+                  defaultValue={assignment?.availableUntil}
+                  onChange={(e) => {
+                    setAssignment({
+                      ...assignment,
+                      availableUntil: e.target.value,
+                    });
+                  }}
+                />
               </Form.Group>
             </Row>
           </Container>
@@ -163,15 +210,25 @@ export default function AssignmentEditor() {
       <Row>
         <Col>
           <Link
-            href={`/courses/${assignment?.course}/assignments`}
+            href={`/courses/${assignment?.course ?? cid}/assignments`}
             className="ms-2"
           >
-            <Button variant="danger" className="float-end">
+            <Button
+              variant="danger"
+              className="float-end"
+              onClick={() => {
+                if (isNewAssignment) {
+                  dispatch(addAssignment(assignment));
+                } else {
+                  dispatch(updateAssignment(assignment));
+                }
+              }}
+            >
               Save
             </Button>
           </Link>
           <Link
-            href={`/courses/${assignment?.course}/assignments`}
+            href={`/courses/${assignment?.course ?? cid}/assignments`}
             className="me-2"
           >
             <Button variant="secondary" className="float-end">

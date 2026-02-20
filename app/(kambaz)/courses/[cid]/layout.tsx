@@ -11,7 +11,7 @@ export default function CoursesLayout({
   const { cid } = useParams();
   const { courses } = useSelector((state: RootState) => state.coursesReducer);
   const course = courses.find((course: any) => course._id === cid);
-  const [showNavigation, setShowNavigation] = useState<boolean>(false);
+  const [showNavigation, setShowNavigation] = useState<boolean>(true);
 
   return (
     <div id="wd-courses">
