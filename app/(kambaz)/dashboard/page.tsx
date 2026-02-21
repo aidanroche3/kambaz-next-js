@@ -17,11 +17,17 @@ import { addNewCourse, deleteCourse, updateCourse } from "../courses/reducer";
 import { addEnrollment, deleteEnrollment } from "./reducer";
 import { RootState } from "../store";
 
+type User = {
+  _id: string;
+  name: string;
+  email: string;
+};
+
 export default function Dashboard() {
   const { courses } = useSelector((state: RootState) => state.coursesReducer);
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer,
-  );
+  ) as { currentUser: User | null };
   const { enrollments } = useSelector(
     (state: RootState) => state.enrollmentReducer,
   );
