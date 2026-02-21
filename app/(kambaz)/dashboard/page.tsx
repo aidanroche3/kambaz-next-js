@@ -41,10 +41,10 @@ export default function Dashboard() {
     return courses.filter(
       (course) =>
         currentUser !== null &&
-        currentUser._id !== null &&
+        currentUser?._id !== null &&
         enrollments.some(
           (enrollment) =>
-            enrollment.user === currentUser._id &&
+            enrollment.user === currentUser?._id &&
             enrollment.course === course._id,
         ),
     );
@@ -112,7 +112,7 @@ export default function Dashboard() {
                       (enrollment) =>
                         currentUser !== null &&
                         currentUser?._id !== null &&
-                        enrollment.user === currentUser._id &&
+                        enrollment.user === currentUser?._id &&
                         enrollment.course === course._id,
                     )
                       ? `/courses/${course._id}/home`
@@ -162,7 +162,7 @@ export default function Dashboard() {
                       <>
                         {enrollments.some(
                           (enrollment) =>
-                            enrollment.user === currentUser._id &&
+                            enrollment.user === currentUser?._id &&
                             enrollment.course === course._id,
                         ) ? (
                           <Button
@@ -171,7 +171,7 @@ export default function Dashboard() {
                               event.preventDefault();
                               dispatch(
                                 deleteEnrollment({
-                                  user: currentUser._id,
+                                  user: currentUser?._id,
                                   course: course._id,
                                 }),
                               );
@@ -187,7 +187,7 @@ export default function Dashboard() {
                               event.preventDefault();
                               dispatch(
                                 addEnrollment({
-                                  user: currentUser._id,
+                                  user: currentUser?._id,
                                   course: course._id,
                                 }),
                               );
