@@ -33,7 +33,12 @@ export default function AssignmentEditor() {
     assignments.find((assignment: any) => assignment._id === aid) ?? {
       _id: aid,
       course: cid,
-      title: "New Assignment",
+      title: "",
+      description: "",
+      points: 100,
+      dueDate: "",
+      availableFrom: "",
+      availableUntil: "",
     },
   );
 
