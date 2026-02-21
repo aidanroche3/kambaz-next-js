@@ -38,15 +38,12 @@ export default function Dashboard() {
   const [showAllEnrollments, setShowAllEnrollments] = useState(false);
 
   const userEnrollments = useMemo(() => {
-    return courses.filter(
-      (course) =>
-        currentUser &&
-        currentUser?._id &&
-        enrollments.some(
-          (enrollment) =>
-            enrollment.user === currentUser?._id &&
-            enrollment.course === course._id,
-        ),
+    return courses.filter((course) =>
+      enrollments.some(
+        (enrollment) =>
+          enrollment.user === currentUser?._id &&
+          enrollment.course === course._id,
+      ),
     );
   }, [courses, currentUser, enrollments]);
 
@@ -110,8 +107,6 @@ export default function Dashboard() {
                   href={
                     enrollments.some(
                       (enrollment) =>
-                        currentUser &&
-                        currentUser?._id &&
                         enrollment.user === currentUser?._id &&
                         enrollment.course === course._id,
                     )
@@ -158,46 +153,42 @@ export default function Dashboard() {
                     >
                       Edit
                     </Button>
-                    {currentUser && currentUser?._id && (
-                      <>
-                        {enrollments.some(
-                          (enrollment) =>
-                            enrollment.user === currentUser?._id &&
-                            enrollment.course === course._id,
-                        ) ? (
-                          <Button
-                            id="wd-unenroll-click"
-                            onClick={(event) => {
-                              event.preventDefault();
-                              dispatch(
-                                deleteEnrollment({
-                                  user: currentUser?._id,
-                                  course: course._id,
-                                }),
-                              );
-                            }}
-                            className="btn btn-danger me-2 float-end"
-                          >
-                            Unenroll
-                          </Button>
-                        ) : (
-                          <Button
-                            id="wd-enroll-click"
-                            onClick={(event) => {
-                              event.preventDefault();
-                              dispatch(
-                                addEnrollment({
-                                  user: currentUser?._id,
-                                  course: course._id,
-                                }),
-                              );
-                            }}
-                            className="btn btn-success me-2 float-end"
-                          >
-                            Enroll
-                          </Button>
-                        )}
-                      </>
+                    {enrollments.some(
+                      (enrollment) =>
+                        enrollment.user === currentUser?._id &&
+                        enrollment.course === course._id,
+                    ) ? (
+                      <Button
+                        id="wd-unenroll-click"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          dispatch(
+                            deleteEnrollment({
+                              user: currentUser?._id,
+                              course: course._id,
+                            }),
+                          );
+                        }}
+                        className="btn btn-danger me-2 float-end"
+                      >
+                        Unenroll
+                      </Button>
+                    ) : (
+                      <Button
+                        id="wd-enroll-click"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          dispatch(
+                            addEnrollment({
+                              user: currentUser?._id,
+                              course: course._id,
+                            }),
+                          );
+                        }}
+                        className="btn btn-success me-2 float-end"
+                      >
+                        Enroll
+                      </Button>
                     )}
                   </CardBody>
                 </Link>
