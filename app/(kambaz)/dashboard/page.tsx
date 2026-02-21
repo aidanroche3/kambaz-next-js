@@ -40,8 +40,8 @@ export default function Dashboard() {
   const userEnrollments = useMemo(() => {
     return courses.filter(
       (course) =>
-        currentUser !== null &&
-        currentUser?._id !== null &&
+        currentUser &&
+        currentUser?._id &&
         enrollments.some(
           (enrollment) =>
             enrollment.user === currentUser?._id &&
@@ -110,8 +110,8 @@ export default function Dashboard() {
                   href={
                     enrollments.some(
                       (enrollment) =>
-                        currentUser !== null &&
-                        currentUser?._id !== null &&
+                        currentUser &&
+                        currentUser?._id &&
                         enrollment.user === currentUser?._id &&
                         enrollment.course === course._id,
                     )
@@ -158,7 +158,7 @@ export default function Dashboard() {
                     >
                       Edit
                     </Button>
-                    {currentUser !== null && currentUser?._id !== null && (
+                    {currentUser && currentUser?._id && (
                       <>
                         {enrollments.some(
                           (enrollment) =>
