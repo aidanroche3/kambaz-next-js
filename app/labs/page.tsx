@@ -20,8 +20,13 @@ export default function labs() {
           </Link>
         </li>
         <li>
-          <Link href="/" id="wd-kambaz-link">
-            Kambaz
+          <Link href="/labs/lab3" id="wd-lab3-link">
+            Lab 3: JavaScript Fundamentals{" "}
+          </Link>
+        </li>
+        <li>
+          <Link href="/labs/lab4" id="wd-lab4-link">
+            Lab 4: Maintaining State
           </Link>
         </li>
         <li>

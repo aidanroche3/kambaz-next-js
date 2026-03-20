@@ -7,11 +7,15 @@ import { MdAssignmentAdd } from "react-icons/md";
 import AssignmentControls from "./AssignmentControls";
 import AssignmentHeaderControlButtons from "./AssignmentHeaderControlButtons";
 import { useParams } from "next/navigation";
-import * as db from "../../../database";
+import { RootState } from "../../../store";
+import { useSelector } from "react-redux";
 
 export default function Assignments() {
   const { cid } = useParams();
-  const assignments = db.assignments;
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentReducer,
+  );
+
   return (
     <div id="wd-assignments">
       <AssignmentControls />
@@ -36,7 +40,7 @@ export default function Assignments() {
                     className="me-2 fs-3 float-start"
                     color="green"
                   />
-                  <AssignmentControlButtons />
+                  <AssignmentControlButtons assignmentId={assignment._id} />
                   <Container>
                     <Link
                       href={`/courses/${cid}/assignments/${assignment._id}`}
