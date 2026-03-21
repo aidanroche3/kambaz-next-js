@@ -34,7 +34,7 @@ export const findModulesForCourse = async (courseId: string) => {
   const response = await axios.get(`${COURSES_API}/${courseId}/modules`);
   return response.data;
 };
-export const createModuleForCourse = async (courseId: string, module: any) => {
+export const createModuleForCourse = async (courseId: any, module: any) => {
   const response = await axios.post(
     `${COURSES_API}/${courseId}/modules`,
     module,
