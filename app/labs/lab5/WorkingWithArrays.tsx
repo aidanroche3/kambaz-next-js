@@ -13,9 +13,6 @@ export default function WorkingWithArrays() {
     due: "2021-09-09",
     completed: false,
   });
-  useEffect(() => {
-    console.log("Todo updated:", todo);
-  }, [todo]);
   return (
     <div id="wd-working-with-arrays">
       <h3>Working with Arrays</h3>
