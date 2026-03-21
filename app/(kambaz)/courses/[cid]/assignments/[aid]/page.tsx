@@ -27,7 +27,7 @@ export default function AssignmentEditor() {
   );
   const dispatch = useDispatch();
   const isNewAssignment = assignments.every(
-    (assignment) => assignment._id != aid,
+    (assignment: any) => assignment._id != aid,
   );
 
   const [assignment, setAssignment] = useState(
