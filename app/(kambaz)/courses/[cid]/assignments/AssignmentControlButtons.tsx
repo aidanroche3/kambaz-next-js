@@ -3,8 +3,10 @@ import GreenCheckmark from "../modules/GreenCheckmark";
 import { BiTrash } from "react-icons/bi";
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
-import { deleteAssignment } from "./reducer";
-import { useDispatch } from "react-redux";
+import { setAssignments } from "./reducer";
+import { useDispatch, useSelector } from "react-redux";
+import * as client from "./client";
+import { RootState } from "../../../store";
 
 export default function AssignmentControlButtons({
   assignmentId,
@@ -13,6 +15,15 @@ export default function AssignmentControlButtons({
 }) {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const dispatch = useDispatch();
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentReducer,
+  );
+  const onRemoveAssignment = async (assignmentId: string) => {
+    await client.deleteAssignment(assignmentId);
+    dispatch(
+      setAssignments(assignments.filter((a: any) => a._id !== assignmentId)),
+    );
+  };
   return (
     <>
       <div className="float-end">
@@ -38,7 +49,7 @@ export default function AssignmentControlButtons({
           <Button
             variant="primary"
             onClick={() => {
-              dispatch(deleteAssignment(assignmentId));
+              onRemoveAssignment(assignmentId);
               setShowDeleteModal(false);
             }}
           >

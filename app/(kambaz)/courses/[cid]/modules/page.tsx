@@ -9,10 +9,8 @@ import ModuleControlButtons from "./ModuleControlButtons";
 import ModuleControls from "./ModulesControls";
 import { useEffect, useState } from "react";
 import {
-  addModule,
   editModule,
   updateModule,
-  deleteModule,
   setModules,
 } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";

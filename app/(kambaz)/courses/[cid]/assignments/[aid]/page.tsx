@@ -15,8 +15,9 @@ import FormCheck from "react-bootstrap/esm/FormCheck";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../store";
-import { addAssignment, updateAssignment } from "../reducer";
+import { setAssignments } from "../reducer";
 import { useState } from "react";
+import * as client from "../client";
 
 export default function AssignmentEditor() {
   const { aid } = useParams();
@@ -41,6 +42,20 @@ export default function AssignmentEditor() {
       availableUntil: "",
     },
   );
+
+  const onCreateAssignment = async (assignment: any) => {
+    await client.createAssignment(assignment);
+    const newAssignments = [...assignments, assignment];
+    dispatch(setAssignments(newAssignments));
+  };
+
+  const onUpdateAssignment = async (assignment: any) => {
+    await client.updateAssignment(assignment);
+    const newAssignments = assignments.map((a: any) =>
+      a._id === assignment._id ? assignment : a,
+    );
+    dispatch(setAssignments(newAssignments));
+  };
 
   return (
     <div id="wd-assignments-editor" className="p-5">
@@ -223,9 +238,9 @@ export default function AssignmentEditor() {
               className="float-end"
               onClick={() => {
                 if (isNewAssignment) {
-                  dispatch(addAssignment(assignment));
+                  onCreateAssignment(assignment);
                 } else {
-                  dispatch(updateAssignment(assignment));
+                  onUpdateAssignment(assignment);
                 }
               }}
             >
