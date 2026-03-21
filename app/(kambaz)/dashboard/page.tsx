@@ -174,7 +174,7 @@ export default function Dashboard() {
                 <Link
                   href={
                     enrollments.some(
-                      (enrollment) =>
+                      (enrollment: any) =>
                         enrollment.user === currentUser?._id &&
                         enrollment.course === course._id,
                     )
@@ -222,7 +222,7 @@ export default function Dashboard() {
                       Edit
                     </Button>
                     {enrollments.some(
-                      (enrollment) =>
+                      (enrollment: any) =>
                         enrollment.user === currentUser?._id &&
                         enrollment.course === course._id,
                     ) ? (
