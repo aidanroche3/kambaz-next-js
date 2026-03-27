@@ -45,10 +45,29 @@ export default function Dashboard() {
   });
   const [showAllEnrollments, setShowAllEnrollments] = useState(false);
   const [allCourses, setAllCourses] = useState<any[]>([]);
+
   const fetchAllCourses = async () => {
     try {
-      const courses = await client.fetchAllCourses();
-      setAllCourses(courses);
+      const data = await client.fetchAllCourses();
+      setAllCourses(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchCourses = async () => {
+    try {
+      const data = await client.findMyCourses();
+      dispatch(setCourses(data));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const fetchEnrollments = async () => {
+    try {
+      const data = await enrollmentClient.fetchEnrollments();
+      dispatch(setEnrollments(data));
     } catch (error) {
       console.error(error);
     }
@@ -61,8 +80,14 @@ export default function Dashboard() {
   };
 
   const onDeleteCourse = async (courseId: string) => {
-    const status = await client.deleteCourse(courseId);
-    dispatch(setCourses(courses.filter((course) => course._id !== courseId)));
+    await client.deleteCourse(courseId);
+    dispatch(setCourses(courses.filter((c) => c._id !== courseId)));
+    await fetchAllCourses();
+  };
+
+  const onUpdateCourse = async () => {
+    await client.updateCourse(course);
+    dispatch(setCourses(courses.map((c) => (c._id === course._id ? course : c))));
     await fetchAllCourses();
   };
 
@@ -78,44 +103,13 @@ export default function Dashboard() {
     await fetchEnrollments();
   };
 
-  const onUpdateCourse = async () => {
-    await client.updateCourse(course);
-    dispatch(
-      setCourses(
-        courses.map((c) => {
-          if (c._id === course._id) {
-            return course;
-          } else {
-            return c;
-          }
-        }),
-      ),
-    );
-    await fetchAllCourses();
-  };
-
-  const fetchCourses = async () => {
-    try {
-      const courses = await client.findMyCourses();
-      dispatch(setCourses(courses));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const fetchEnrollments = async () => {
-    try {
-      const enrollments = await enrollmentClient.fetchEnrollments();
-      dispatch(setEnrollments(enrollments));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
-    fetchCourses();
     fetchAllCourses();
-    fetchEnrollments();
+    if (currentUser) {
+      fetchCourses();
+      fetchEnrollments();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser]);
 
   const coursesToShow = showAllEnrollments ? allCourses : courses;
@@ -163,7 +157,7 @@ export default function Dashboard() {
         onChange={(e) => setCourse({ ...course, description: e.target.value })}
       />
       <hr />
-      <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2>
+      <h2 id="wd-dashboard-published">Published Courses ({coursesToShow.length})</h2>
       <hr />
       <div id="wd-dashboard-courses">
         <Row xs={1} md={5} className="g-4">
