@@ -57,11 +57,13 @@ export default function Dashboard() {
   const onAddNewCourse = async () => {
     const newCourse = await client.createCourse(course);
     dispatch(setCourses([...courses, newCourse]));
+    await fetchAllCourses();
   };
 
   const onDeleteCourse = async (courseId: string) => {
     const status = await client.deleteCourse(courseId);
     dispatch(setCourses(courses.filter((course) => course._id !== courseId)));
+    await fetchAllCourses();
   };
 
   const onEnroll = async (courseId: string) => {
@@ -89,6 +91,7 @@ export default function Dashboard() {
         }),
       ),
     );
+    await fetchAllCourses();
   };
 
   const fetchCourses = async () => {
