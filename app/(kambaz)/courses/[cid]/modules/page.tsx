@@ -8,11 +8,7 @@ import LessonControlButtons from "./LessonControlButtons";
 import ModuleControlButtons from "./ModuleControlButtons";
 import ModuleControls from "./ModulesControls";
 import { useEffect, useState } from "react";
-import {
-  editModule,
-  updateModule,
-  setModules,
-} from "./reducer";
+import { editModule, updateModule, setModules } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../store";
 export default function Modules() {
@@ -28,11 +24,11 @@ export default function Modules() {
     setModuleName("");
   };
   const onRemoveModule = async (moduleId: string) => {
-    await client.deleteModule(moduleId);
+    await client.deleteModule(cid as string, moduleId);
     dispatch(setModules(modules.filter((m: any) => m._id !== moduleId)));
   };
   const onUpdateModule = async (module: any) => {
-    await client.updateModule(module);
+    await client.updateModule(cid as string, module);
     const newModules = modules.map((m: any) =>
       m._id === module._id ? module : m,
     );
