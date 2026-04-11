@@ -19,6 +19,10 @@ export const findUserById = async (id: string) => {
   const response = await axios.get(`${USERS_API}/${id}`);
   return response.data;
 };
+export const deleteUser = async (userId: string) => {
+  const response = await axios.delete(`${USERS_API}/${userId}`);
+  return response.data;
+};
 export const signin = async (credentials: any) => {
   const response = await axiosWithCredentials.post(
     `${USERS_API}/signin`,
