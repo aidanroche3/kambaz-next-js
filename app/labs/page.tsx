@@ -30,6 +30,11 @@ export default function labs() {
           </Link>
         </li>
         <li>
+          <Link href="/labs/lab5" id="wd-lab5-link">
+            Lab 5: Working with APIs
+          </Link>
+        </li>
+        <li>
           <Link
             href="https://github.com/aidanroche3/kambaz-next-js"
             id="wd-github-link"

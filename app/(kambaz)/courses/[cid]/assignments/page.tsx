@@ -8,13 +8,24 @@ import AssignmentControls from "./AssignmentControls";
 import AssignmentHeaderControlButtons from "./AssignmentHeaderControlButtons";
 import { useParams } from "next/navigation";
 import { RootState } from "../../../store";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import * as client from "./client";
+import { setAssignments } from "./reducer";
+import { useEffect } from "react";
 
 export default function Assignments() {
   const { cid } = useParams();
+  const dispatch = useDispatch();
   const { assignments } = useSelector(
     (state: RootState) => state.assignmentReducer,
   );
+  const fetchAssignments = async () => {
+    const assignments = await client.fetchAllAssignments();
+    dispatch(setAssignments(assignments));
+  };
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
 
   return (
     <div id="wd-assignments">
