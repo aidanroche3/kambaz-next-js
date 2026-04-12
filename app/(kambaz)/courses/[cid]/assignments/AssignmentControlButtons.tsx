@@ -1,3 +1,5 @@
+"use client";
+
 import { IoEllipsisVertical } from "react-icons/io5";
 import GreenCheckmark from "../modules/GreenCheckmark";
 import { BiTrash } from "react-icons/bi";
@@ -7,19 +9,21 @@ import { setAssignments } from "./reducer";
 import { useDispatch, useSelector } from "react-redux";
 import * as client from "./client";
 import { RootState } from "../../../store";
+import { useParams } from "next/navigation";
 
 export default function AssignmentControlButtons({
   assignmentId,
 }: {
   assignmentId: any;
 }) {
+  const { cid } = useParams();
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const dispatch = useDispatch();
   const { assignments } = useSelector(
     (state: RootState) => state.assignmentReducer,
   );
   const onRemoveAssignment = async (assignmentId: string) => {
-    await client.deleteAssignment(assignmentId);
+    await client.deleteAssignment(cid as string, assignmentId);
     dispatch(
       setAssignments(assignments.filter((a: any) => a._id !== assignmentId)),
     );

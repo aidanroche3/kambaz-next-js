@@ -20,7 +20,7 @@ export default function Assignments() {
     (state: RootState) => state.assignmentReducer,
   );
   const fetchAssignments = async () => {
-    const assignments = await client.fetchAllAssignments();
+    const assignments = await client.fetchAllAssignments(cid as string);
     dispatch(setAssignments(assignments));
   };
   useEffect(() => {
@@ -42,32 +42,34 @@ export default function Assignments() {
             Assignments
           </div>
           <ListGroup className="wd-lessons rounded-0">
-            {assignments
-              .filter((assignment: any) => assignment.course === cid)
-              .map((assignment: any, index: number) => (
-                <ListGroupItem key={index} className="wd-lesson p-3 ps-1">
-                  <BsGripVertical className="me-2 fs-3 float-start" />
-                  <MdAssignmentAdd
-                    className="me-2 fs-3 float-start"
-                    color="green"
-                  />
-                  <AssignmentControlButtons assignmentId={assignment._id} />
-                  <Container>
-                    <Link
-                      href={`/courses/${cid}/assignments/${assignment._id}`}
-                      className="wd-assignment-link text-black text-decoration-none"
-                    >
-                      {assignment.title}
-                    </Link>
-                    <p>
-                      Multiple Modules | <b>Not available until </b> May 13 at
-                      12:00am
-                      <br></br>
-                      <b>Due</b> May 20 at 11:59pm | 100 pts
-                    </p>
-                  </Container>
-                </ListGroupItem>
-              ))}
+            {assignments.map((assignment: any, index: number) => (
+              <ListGroupItem key={index} className="wd-lesson p-3 ps-1">
+                <BsGripVertical className="me-2 fs-3 float-start" />
+                <MdAssignmentAdd
+                  className="me-2 fs-3 float-start"
+                  color="green"
+                />
+                <AssignmentControlButtons assignmentId={assignment._id} />
+                <Container>
+                  <Link
+                    href={`/courses/${cid}/assignments/${assignment._id}`}
+                    className="wd-assignment-link text-black text-decoration-none"
+                  >
+                    {assignment.title}
+                  </Link>
+                  <p>
+                    Multiple Modules | <b>Not available until </b>
+                    {assignment.availableFrom.toLocaleString() ??
+                      "Not specified"}
+                    <br></br>
+                    <b>Due</b>{" "}
+                    {assignment.dueDate.toLocaleString() ?? "Not specified"} |{" "}
+                    {assignment.points}
+                    points
+                  </p>
+                </Container>
+              </ListGroupItem>
+            ))}
           </ListGroup>
         </ListGroupItem>
       </ListGroup>
