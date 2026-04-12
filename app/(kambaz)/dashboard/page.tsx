@@ -14,7 +14,6 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { setCourses } from "../courses/reducer";
-import { setEnrollments } from "./reducer";
 import { RootState } from "../store";
 import * as client from "../courses/client";
 import * as enrollmentClient from "../dashboard/client";
@@ -30,9 +29,7 @@ export default function Dashboard() {
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer,
   ) as { currentUser: User | null };
-  const { enrollments } = useSelector(
-    (state: RootState) => state.enrollmentReducer,
-  );
+
   const dispatch = useDispatch();
   const [course, setCourse] = useState<any>({
     _id: "0",
@@ -64,15 +61,6 @@ export default function Dashboard() {
     }
   };
 
-  const fetchEnrollments = async () => {
-    try {
-      const data = await enrollmentClient.fetchEnrollments();
-      dispatch(setEnrollments(data));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   const onAddNewCourse = async () => {
     const newCourse = await client.createCourse(course);
     dispatch(setCourses([...courses, newCourse]));
@@ -87,27 +75,26 @@ export default function Dashboard() {
 
   const onUpdateCourse = async () => {
     await client.updateCourse(course);
-    dispatch(setCourses(courses.map((c) => (c._id === course._id ? course : c))));
+    dispatch(
+      setCourses(courses.map((c) => (c._id === course._id ? course : c))),
+    );
     await fetchAllCourses();
   };
 
   const onEnroll = async (courseId: string) => {
-    await enrollmentClient.enrollInCourse(courseId, currentUser!._id);
+    await enrollmentClient.enrollIntoCourse(currentUser!._id, courseId);
     await fetchCourses();
-    await fetchEnrollments();
   };
 
   const onUnenroll = async (courseId: string) => {
-    await enrollmentClient.unenrollFromCourse(courseId, currentUser!._id);
+    await enrollmentClient.unenrollFromCourse(currentUser!._id, courseId);
     await fetchCourses();
-    await fetchEnrollments();
   };
 
   useEffect(() => {
     fetchAllCourses();
     if (currentUser) {
       fetchCourses();
-      fetchEnrollments();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser]);
@@ -157,7 +144,9 @@ export default function Dashboard() {
         onChange={(e) => setCourse({ ...course, description: e.target.value })}
       />
       <hr />
-      <h2 id="wd-dashboard-published">Published Courses ({coursesToShow.length})</h2>
+      <h2 id="wd-dashboard-published">
+        Published Courses ({coursesToShow.length})
+      </h2>
       <hr />
       <div id="wd-dashboard-courses">
         <Row xs={1} md={5} className="g-4">
@@ -170,11 +159,7 @@ export default function Dashboard() {
               <Card>
                 <Link
                   href={
-                    enrollments.some(
-                      (enrollment: any) =>
-                        enrollment.user === currentUser?._id &&
-                        enrollment.course === course._id,
-                    )
+                    courses.some((c) => c._id === course._id)
                       ? `/courses/${course._id}/home`
                       : ""
                   }
@@ -218,11 +203,7 @@ export default function Dashboard() {
                     >
                       Edit
                     </Button>
-                    {enrollments.some(
-                      (enrollment: any) =>
-                        enrollment.user === currentUser?._id &&
-                        enrollment.course === course._id,
-                    ) ? (
+                    {courses.some((c) => c._id === course._id) ? (
                       <Button
                         id="wd-unenroll-click"
                         onClick={(event) => {
