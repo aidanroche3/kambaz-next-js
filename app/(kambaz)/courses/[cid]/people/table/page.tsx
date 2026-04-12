@@ -2,9 +2,11 @@
 import { Table } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 import PeopleDetails from "./../Details";
-import Link from "next/link";
-import { useState } from "react";
-export default function PeopleTable({
+import { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
+import * as client from "../../../client";
+
+export function PeopleTable({
   users = [],
   fetchUsers,
 }: {
@@ -63,4 +65,20 @@ export default function PeopleTable({
       </Table>
     </div>
   );
+}
+
+export default function PeopleTablePage() {
+  const { cid } = useParams();
+  const [users, setUsers] = useState<any[]>([]);
+
+  const fetchUsers = async () => {
+    const users = await client.findUsersForCourse(cid);
+    setUsers(users);
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, [cid]);
+
+  return <PeopleTable users={users} fetchUsers={fetchUsers} />;
 }
