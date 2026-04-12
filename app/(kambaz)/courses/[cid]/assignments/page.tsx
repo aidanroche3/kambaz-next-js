@@ -58,14 +58,10 @@ export default function Assignments() {
                     {assignment.title}
                   </Link>
                   <p>
-                    Multiple Modules | <b>Not available until </b>
-                    {assignment.availableFrom.toLocaleString() ??
-                      "Not specified"}
+                    Multiple Modules | <b>Not available until </b> May 13 at
+                    12:00am
                     <br></br>
-                    <b>Due</b>{" "}
-                    {assignment.dueDate.toLocaleString() ?? "Not specified"} |{" "}
-                    {assignment.points}
-                    points
+                    <b>Due</b> May 20 at 11:59pm | 100 pts
                   </p>
                 </Container>
               </ListGroupItem>
