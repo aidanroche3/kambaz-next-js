@@ -72,12 +72,13 @@ export default function PeopleTablePage() {
   const [users, setUsers] = useState<any[]>([]);
 
   const fetchUsers = async () => {
-    const users = await client.findUsersForCourse(cid);
+    const users = await client.findUsersForCourse(cid as string);
     setUsers(users);
   };
 
   useEffect(() => {
     fetchUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cid]);
 
   return <PeopleTable users={users} fetchUsers={fetchUsers} />;
